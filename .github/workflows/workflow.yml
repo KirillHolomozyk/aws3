@@ -59,8 +59,8 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.REPOSITORY_NAME }}
           IMAGE_TAG: latest
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY
+        docker build -t $ECR_REGISTRY/flask_app_repository .
+        docker push $ECR_REGISTRY/flask_app_repository
 
     - name: Setup Terraform
       env:
